@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta author="Christopher Montero D'oleo">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./chronometer.png">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <title>Cronometro</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: arial, sans-serif;
+        }
+
+        .container {
+            background: whitesmoke;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .cronometro {
+            margin: 0em 1em;
+            font-size: 3em;
+            width: 9em;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border: solid 5px yellow;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.6);
+            border-radius: 20px;
+            padding: .5em;
+            background-color: #0a0a16;
+            color: yellow;
+            font-weight: bold;
+        }
+
+
+        .btn {
+            margin-top: .5em;
+            font-size: 1.7rem;
+        }
+
+        .animation-click {
+            animation: slider-top .3s alternate ease;
+        }
+
+        i:hover {
+            cursor: pointer;
+        }
+
+        @keyframes slider-top {
+            0% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translatey(-10px);
+            }
+
+            100% {
+                transform: translateY(0px)
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="cronometro">
+            <div id="hms">00:00:00</div>
+            <div class="btn">
+                <i class="fas fa-play" id="start"></i>
+                <i class="fas fa-stop" id="stop"></i>
+                <i class="fas fa-undo" id="reset"></i>
+            </div>
+        </div>
+    </div>
+
+    <script src="./cronometro.js"></script>
+</body>
+
+</html>
