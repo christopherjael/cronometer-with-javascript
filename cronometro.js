@@ -8,7 +8,7 @@ var m = "00";
 var h = "00";
 
 const init = () => {
-    cronoTrigger = setInterval(start,1)
+    cronoTrigger = setInterval(start,1000)
     $start.removeEventListener('click', init)
 }
 
