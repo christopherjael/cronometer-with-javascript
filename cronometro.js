@@ -8,30 +8,25 @@ var m = "00";
 var h = "00";
 
 const init = () => {
-    cronoTrigger = setInterval(start,1000)
+    cronoTrigger = setInterval(start,1)
     $start.removeEventListener('click', init)
 }
 
 const start = () => {
+
     s++
-    if( s < 10){
-        s = "0"+s.toString()
-    }
+    s = s.toString().padStart(2, '00')
 
     if (s > 59){
         s = "00"
         m++
-        if (m < 10){
-            m = '0'+m.toString()
-        }
+        m = m.toString().padStart(2, '00')
     }
 
     if( m > 59){
         m = "00"
         h++
-        if ( h < 10){
-            h = '0'+h.toString()
-        }
+        h = h.toString().padStart(2, '00')
     }
 
     if ( h > 24 ){
